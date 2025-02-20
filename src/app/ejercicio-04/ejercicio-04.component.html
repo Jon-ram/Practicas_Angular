@@ -1,0 +1,4 @@
+<p *ngIf="isServerRunning; else notRunning">Yes, the server is running</p>
+<ng-template #notRunning>
+  <p>No, the server is not running</p>
+</ng-template>
