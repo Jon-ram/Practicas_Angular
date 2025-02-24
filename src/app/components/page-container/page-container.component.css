@@ -1,0 +1,23 @@
+*
+{
+    background-color: blue;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+}
+.container  app-breadcrumb {
+    flex: 0 0 5%; /* La altura será de 200px */
+}
+
+.container  app-content {
+    flex: 0 0 90%; /* La altura será de 200px */
+}
+
+.container  app-footer {
+    flex: 0 0 5%; /* La altura será de 200px */
+}
+
+
