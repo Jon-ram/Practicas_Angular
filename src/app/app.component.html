@@ -1,21 +1,8 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <app-sidebar></app-sidebar>
-    <app-page-container></app-page-container>
+  <!-- Escuchamos el evento (exerciseSelected) que emite el sidebar -->
+  <app-sidebar (exerciseSelected)="onExerciseSelected($event)"></app-sidebar>
+
+  <!-- Pasamos el ejercicio seleccionado al page-container -->
+  <app-page-container [selectedExercise]="currentExercise"></app-page-container>
 </div>
-<!--<h1></h1>
-<h1>MANUAL DE PRACTICAS</h1>
-<p>Elaborado por: <strong>Jonathan Baldemar Ramirez Reyes</strong></p>
-<hr>
-<h2>Ejercicio 1:</h2>
-<app-ejercicio-01></app-ejercicio-01>
-<h2>Ejercicio 2:</h2>
-<app-ejercicio-02></app-ejercicio-02>
-<h2>Ejercicio 3:</h2>
-<app-ejercicio-03></app-ejercicio-03>
-<h2>Ejercicio 4:</h2>
-<app-ejercicio-04></app-ejercicio-04>
-<h2>Ejercicio 5:</h2>
-<app-ejercicio-05></app-ejercicio-05>
-<h2>Ejercicio 6:</h2>
-<app-ejercicio-06></app-ejercicio-06>-->

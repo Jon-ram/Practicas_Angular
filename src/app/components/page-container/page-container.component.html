@@ -1,6 +1,7 @@
-
 <div class="container">
-    <app-breadcrumb></app-breadcrumb>
-    <app-content></app-content>
+    <!-- Enlazamos la propiedad [exerciseName] con la variable selectedExercise -->
+    <app-breadcrumb [exerciseName]="selectedExercise"></app-breadcrumb>
+    <app-content [exerciseName]="selectedExercise"></app-content>
     <app-footer></app-footer>
-</div>
+  </div>
+  

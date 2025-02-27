@@ -1,5 +1,12 @@
-*
-{
+/* Quita height: 5vh; para que el padre maneje la altura */
+:host {
     background-color: orange;
-    height: 5vh;
-}
+    display: flex;
+    align-items: center;
+    padding-left: 10px; /* ejemplo */
+  }
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+  

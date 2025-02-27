@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Ejercicio01Component } from './ejercicio-01/ejercicio-01.component';
 import { Ejercicio02Component } from './ejercicio-02/ejercicio-02.component';
 import { Ejercicio03Component } from './ejercicio-03/ejercicio-03.component';
@@ -12,11 +11,28 @@ import { PageContainerComponent } from './components/page-container/page-contain
 
 @Component({
   selector: 'app-root',
-  standalone:true,
-  imports: [Ejercicio01Component,Ejercicio02Component,Ejercicio03Component,Ejercicio04Component,Ejercicio05Component,Ejercicio06Component,NavbarComponent,SidebarComponent,PageContainerComponent],
+  standalone: true,
+  imports: [
+    Ejercicio01Component,
+    Ejercicio02Component,
+    Ejercicio03Component,
+    Ejercicio04Component,
+    Ejercicio05Component,
+    Ejercicio06Component,
+    NavbarComponent,
+    SidebarComponent,
+    PageContainerComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']  // <-- Asegúrate de usar styleUrls con 's'
 })
 export class AppComponent {
   title = 'ManualEjercicios_Anglar_230410';
+
+  // Esta propiedad guardará el nombre del ejercicio seleccionado
+  currentExercise: string = '';
+
+  onExerciseSelected(exerciseName: string) {
+    this.currentExercise = exerciseName;
+  }
 }

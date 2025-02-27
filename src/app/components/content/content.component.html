@@ -1,1 +1,25 @@
-<p>content works!</p>
+<!-- Mostramos condicionalmente el componente del ejercicio correspondiente -->
+<div *ngIf="exerciseName === 'Ejercicio 01'">
+    <app-ejercicio-01></app-ejercicio-01>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 02'">
+    <app-ejercicio-02></app-ejercicio-02>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 03'">
+    <app-ejercicio-03></app-ejercicio-03>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 04'">
+    <app-ejercicio-04></app-ejercicio-04>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 05'">
+    <app-ejercicio-05></app-ejercicio-05>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 06'">
+    <app-ejercicio-06></app-ejercicio-06>
+  </div>
+  
+  <!-- Si no hay ninguno seleccionado, puedes mostrar algo por defecto -->
+  <div *ngIf="!exerciseName">
+    <p>Selecciona un ejercicio en la barra lateral.</p>
+  </div>
+  

@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ContentComponent } from '../content/content.component';
 import { FooterComponent } from '../footer/footer.component';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-page-container',
-  imports: [ContentComponent,FooterComponent,BreadcrumbComponent],
+  standalone: true,
+  imports: [ContentComponent, FooterComponent, BreadcrumbComponent],
   templateUrl: './page-container.component.html',
-  styleUrl: './page-container.component.css'
+  styleUrls: ['./page-container.component.css']
 })
 export class PageContainerComponent {
-
+  // Recibimos el nombre del ejercicio desde app.component
+  @Input() selectedExercise: string = '';
 }

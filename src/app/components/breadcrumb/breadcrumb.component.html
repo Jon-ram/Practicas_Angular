@@ -1,1 +1,5 @@
-<p>breadcrumb works!</p>
+<!-- Si no hay ejercicio seleccionado, muestra un texto por defecto -->
+<p *ngIf="exerciseName; else noExercise">{{ exerciseName }}</p>
+<ng-template #noExercise>
+  <p>Seleccione un ejercicio</p>
+</ng-template>

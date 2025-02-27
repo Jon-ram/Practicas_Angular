@@ -1,23 +1,27 @@
-*
-{
-    background-color: blue;
-    height: 100vh;
-}
+/* Quitamos la regla * { background-color: blue; height: 100vh; } 
+   porque forzaba a todos los hijos a 100vh de alto y azul. */
+
+/* Este contenedor interno controla la distribución vertical */
 .container {
     display: flex;
-    flex-direction: column; 
-    height: 100vh;
-}
-.container  app-breadcrumb {
-    flex: 0 0 5%; /* La altura será de 200px */
-}
-
-.container  app-content {
-    flex: 0 0 90%; /* La altura será de 200px */
-}
-
-.container  app-footer {
-    flex: 0 0 5%; /* La altura será de 200px */
-}
-
-
+    flex-direction: column;
+    height: 100%; /* El padre (app.component) ya mide 100vh en total */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* El breadcrumb ocupará 5% de la altura */
+  .container app-breadcrumb {
+    flex: 0 0 5%;
+  }
+  
+  /* El content ocupará 90% de la altura */
+  .container app-content {
+    flex: 0 0 90%;
+  }
+  
+  /* El footer ocupará 5% de la altura */
+  .container app-footer {
+    flex: 0 0 5%;
+  }
+  
