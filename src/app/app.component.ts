@@ -1,36 +1,30 @@
 import { Component } from '@angular/core';
-import { Ejercicio01Component } from './ejercicio-01/ejercicio-01.component';
-import { Ejercicio02Component } from './ejercicio-02/ejercicio-02.component';
-import { Ejercicio03Component } from './ejercicio-03/ejercicio-03.component';
-import { Ejercicio04Component } from './ejercicio-04/ejercicio-04.component';
-import { Ejercicio05Component } from './ejercicio-05/ejercicio-05.component';
-import { Ejercicio06Component } from './ejercicio-06/ejercicio-06.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PageContainerComponent } from './components/page-container/page-container.component';
+import { NgIf } from '@angular/common'; // Necesario para *ngIf
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    Ejercicio01Component,
-    Ejercicio02Component,
-    Ejercicio03Component,
-    Ejercicio04Component,
-    Ejercicio05Component,
-    Ejercicio06Component,
     NavbarComponent,
     SidebarComponent,
-    PageContainerComponent
+    PageContainerComponent,
+    NgIf // Importamos NgIf para usar *ngIf en la plantilla
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']  // <-- Asegúrate de usar styleUrls con 's'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'ManualEjercicios_Anglar_230410';
+  
+  isSidebarCollapsed = false; // Estado del sidebar
+  currentExercise: string = ''; // Nombre del ejercicio seleccionado
 
-  // Esta propiedad guardará el nombre del ejercicio seleccionado
-  currentExercise: string = '';
+  toggleSidebar() {
+    this.isSidebarCollapsed = !this.isSidebarCollapsed;
+  }
 
   onExerciseSelected(exerciseName: string) {
     this.currentExercise = exerciseName;

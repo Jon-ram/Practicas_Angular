@@ -1,17 +1,23 @@
 .container {
-    display: flex;
-    height: 100vh; /* Altura total de la ventana */
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Sidebar ocupa el 15% del ancho */
-  .container app-sidebar {
-    flex: 0 0 15%;
-  }
-  
-  /* Page-container ocupa el 85% del ancho */
-  .container app-page-container {
-    flex: 0 0 85%;
-  }
-  
+  display: flex;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.container app-sidebar {
+  flex: 0 0 15%;
+  transition: all 0.3s ease;
+}
+
+.container app-page-container {
+  flex: 0 0 85%;
+  transition: all 0.3s ease;
+}
+
+.sidebar-collapsed app-sidebar {
+  display: none;
+}
+
+.sidebar-collapsed app-page-container {
+  flex: 0 0 100%;
+}

@@ -22,4 +22,20 @@
   <div *ngIf="!exerciseName">
     <p>Selecciona un ejercicio en la barra lateral.</p>
   </div>
+  <div *ngIf="exerciseName === 'Ejercicio 07'">
+    <app-ejercicio-07></app-ejercicio-07>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 08'">
+    <app-ejercicio-08 [name]="'Jonathan'"></app-ejercicio-08>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 09'">
+    <app-ejercicio-09 (itemAdded)="onItemAdded()"></app-ejercicio-09>
+    <p>Items added: {{ itemCount }}</p>
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 10'">
+    <app-ejercicio-10></app-ejercicio-10>
+  </div>
+  
+  
+  
   

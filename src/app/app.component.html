@@ -1,8 +1,8 @@
-<app-navbar></app-navbar>
-<div class="container">
-  <!-- Escuchamos el evento (exerciseSelected) que emite el sidebar -->
-  <app-sidebar (exerciseSelected)="onExerciseSelected($event)"></app-sidebar>
+<app-navbar (toggle)="toggleSidebar()"></app-navbar>
 
-  <!-- Pasamos el ejercicio seleccionado al page-container -->
+<div class="container" [class.sidebar-collapsed]="isSidebarCollapsed">
+  <!-- Ocultar sidebar cuando esté colapsado -->
+  <app-sidebar *ngIf="!isSidebarCollapsed" (exerciseSelected)="onExerciseSelected($event)"></app-sidebar>
+
   <app-page-container [selectedExercise]="currentExercise"></app-page-container>
 </div>
