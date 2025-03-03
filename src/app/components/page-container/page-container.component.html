@@ -1,7 +1,20 @@
 <div class="container">
-    <!-- Enlazamos la propiedad [exerciseName] con la variable selectedExercise -->
-    <app-breadcrumb [exerciseName]="selectedExercise"></app-breadcrumb>
-    <app-content [exerciseName]="selectedExercise"></app-content>
-    <app-footer></app-footer>
+  <!-- Breadcrumb con altura fija -->
+  <div class="breadcrumb-container">
+    <app-breadcrumb *ngIf="isLoggedIn" [exerciseName]="selectedExercise"></app-breadcrumb>
   </div>
   
+  <!-- Área de contenido que ocupa el espacio restante -->
+  <div class="content-container">
+    <app-content 
+         [exerciseName]="selectedExercise" 
+         [isLoggedIn]="isLoggedIn"
+         (login)="onLogin()">
+    </app-content>
+  </div>
+  
+  <!-- Footer con altura fija -->
+  <div class="footer-container">
+    <app-footer></app-footer>
+  </div>
+</div>

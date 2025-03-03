@@ -1,7 +1,16 @@
 :host {
-    background-color: purple;
-    display: block;
-    padding: 10px; /* ejemplo */
-    overflow: auto; /* Para scroll si el contenido es grande */
-  }
-  
+  display: block;
+  height: 100%;
+}
+
+/* Contenedor para el login: ocupa todo el espacio disponible y centra el contenido */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+* {
+  background-color: red;
+}

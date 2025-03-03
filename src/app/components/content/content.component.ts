@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// Importa aquí los componentes de los ejercicios:
 import { Ejercicio01Component } from '../../ejercicio-01/ejercicio-01.component';
 import { Ejercicio02Component } from '../../ejercicio-02/ejercicio-02.component';
 import { Ejercicio03Component } from '../../ejercicio-03/ejercicio-03.component';
@@ -33,9 +32,16 @@ import { Ejercicio10Component } from '../../ejercicio-10/ejercicio-10.component'
 })
 export class ContentComponent {
   @Input() exerciseName: string = '';
-  itemCount = 0; // Contador de elementos agregados
+  @Input() isLoggedIn: boolean = true;
+  @Output() login = new EventEmitter<void>();
+  
+  itemCount = 0;
 
   onItemAdded() {
-    this.itemCount++; // Aumenta el contador cuando se recibe el evento
+    this.itemCount++;
+  }
+
+  loginClick() {
+    this.login.emit();
   }
 }

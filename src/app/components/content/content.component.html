@@ -1,5 +1,11 @@
-<!-- Mostramos condicionalmente el componente del ejercicio correspondiente -->
-<div *ngIf="exerciseName === 'Ejercicio 01'">
+<!-- Si se ha hecho logout, se muestra el botón Login centrado -->
+<div *ngIf="!isLoggedIn" class="login-container">
+  <button (click)="loginClick()">Login</button>
+</div>
+
+<!-- Si está logueado, se muestra el contenido de ejercicios -->
+<div *ngIf="isLoggedIn">
+  <div *ngIf="exerciseName === 'Ejercicio 01'">
     <app-ejercicio-01></app-ejercicio-01>
   </div>
   <div *ngIf="exerciseName === 'Ejercicio 02'">
@@ -17,8 +23,6 @@
   <div *ngIf="exerciseName === 'Ejercicio 06'">
     <app-ejercicio-06></app-ejercicio-06>
   </div>
-  
-  <!-- Si no hay ninguno seleccionado, puedes mostrar algo por defecto -->
   <div *ngIf="!exerciseName">
     <p>Selecciona un ejercicio en la barra lateral.</p>
   </div>
@@ -35,7 +39,4 @@
   <div *ngIf="exerciseName === 'Ejercicio 10'">
     <app-ejercicio-10></app-ejercicio-10>
   </div>
-  
-  
-  
-  
+</div>

@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 50px); /* Resta la altura del navbar */
   transition: all 0.3s ease;
 }
 

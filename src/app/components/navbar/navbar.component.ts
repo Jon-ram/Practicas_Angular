@@ -8,8 +8,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NavbarComponent {
   @Output() toggle = new EventEmitter<void>();
+  @Output() logout = new EventEmitter<void>();
 
   toggleSidebar() {
     this.toggle.emit();
+  }
+
+  onLogout() {
+    this.logout.emit();
   }
 }

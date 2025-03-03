@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PageContainerComponent } from './components/page-container/page-container.component';
-import { NgIf } from '@angular/common'; // Necesario para *ngIf
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import { NgIf } from '@angular/common'; // Necesario para *ngIf
     NavbarComponent,
     SidebarComponent,
     PageContainerComponent,
-    NgIf // Importamos NgIf para usar *ngIf en la plantilla
+    NgIf
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -19,8 +19,9 @@ import { NgIf } from '@angular/common'; // Necesario para *ngIf
 export class AppComponent {
   title = 'ManualEjercicios_Anglar_230410';
   
-  isSidebarCollapsed = false; // Estado del sidebar
-  currentExercise: string = ''; // Nombre del ejercicio seleccionado
+  isSidebarCollapsed = false;
+  currentExercise: string = '';
+  isLoggedIn: boolean = true; // Estado de autenticación
 
   toggleSidebar() {
     this.isSidebarCollapsed = !this.isSidebarCollapsed;
@@ -28,5 +29,13 @@ export class AppComponent {
 
   onExerciseSelected(exerciseName: string) {
     this.currentExercise = exerciseName;
+  }
+
+  logout() {
+    this.isLoggedIn = false;
+  }
+
+  login() {
+    this.isLoggedIn = true;
   }
 }
