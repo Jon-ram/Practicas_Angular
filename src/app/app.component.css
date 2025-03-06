@@ -1,6 +1,7 @@
+/* app.component.css */
 .container {
   display: flex;
-  height: calc(100vh - 50px); /* Resta la altura del navbar */
+  height: 95vh; /* 95% del alto de la pantalla, el navbar ocupará el 5% superior */
   transition: all 0.3s ease;
 }
 

@@ -1,16 +1,13 @@
+/* content.component.css */
 :host {
   display: block;
   height: 100%;
 }
 
-/* Contenedor para el login: ocupa todo el espacio disponible y centra el contenido */
+/* Contenedor para el login, centrado vertical y horizontalmente */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-
-* {
-  background-color: red;
+  height: 100%;
 }

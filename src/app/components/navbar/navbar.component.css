@@ -1,16 +1,20 @@
-*
-{
+/* navbar.component.css */
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: red;
-    height: 5%;
-    width: 100%;
-}
-p {
-    margin: 0px;
-}
-
-button {
+    height: 5vh;    /* 5% del alto de la pantalla */
+    width: 100vw;   /* 100% del ancho de la pantalla */
+    padding: 0 10px;
+  }
+  
+  button {
     padding: 5px;
     height: 30px;
     background-color: blue;
     width: 50px;
-}
+    border: none;
+    cursor: pointer;
+  }
+  

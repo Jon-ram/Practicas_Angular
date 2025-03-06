@@ -1,12 +1,12 @@
-/* Quita height: 5vh; para que el padre maneje la altura */
+/* breadcrumb.component.css */
 :host {
-    background-color: orange;
-    display: flex;
-    align-items: center;
-    padding-left: 10px; /* ejemplo */
-  }
-  p {
-    margin: 0;
-    font-weight: bold;
-  }
-  
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+p {
+  margin: 0;
+  font-weight: bold;
+}

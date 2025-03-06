@@ -1,20 +1,21 @@
+/* page-container.component.css */
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Toma todo el espacio asignado por el contenedor padre */
+  height: 100%; /* Ocupa el 95vh que le asigna el contenedor padre */
   margin: 0;
   padding: 0;
 }
 
 .breadcrumb-container {
-  height: 50px; /* Altura fija para el breadcrumb */
+  height: 5%; /* 5% del alto de page-container */
 }
 
 .content-container {
-  flex: 1; /* Ocupa el espacio restante */
+  height: 90%; /* 90% del alto de page-container */
   overflow: auto;
 }
 
 .footer-container {
-  height: 50px; /* Altura fija para el footer */
+  height: 5%; /* 5% del alto de page-container */
 }

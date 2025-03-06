@@ -10,6 +10,7 @@ import { Ejercicio07Component } from '../../ejercicio-07/ejercicio-07.component'
 import { Ejercicio08Component } from '../../ejercicio-08/ejercicio-08.component';
 import { Ejercicio09Component } from '../../ejercicio-09/ejercicio-09.component';
 import { Ejercicio10Component } from '../../ejercicio-10/ejercicio-10.component';
+import { Ejercicio11Component } from '../../ejercicio-11/ejercicio-11.component';
 
 @Component({
   selector: 'app-content',
@@ -25,7 +26,8 @@ import { Ejercicio10Component } from '../../ejercicio-10/ejercicio-10.component'
     Ejercicio07Component,
     Ejercicio08Component,
     Ejercicio09Component,
-    Ejercicio10Component
+    Ejercicio10Component,
+    Ejercicio11Component,
   ],
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']

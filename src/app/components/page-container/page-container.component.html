@@ -1,10 +1,11 @@
+<!-- page-container.component.html -->
 <div class="container">
-  <!-- Breadcrumb con altura fija -->
+  <!-- Breadcrumb -->
   <div class="breadcrumb-container">
     <app-breadcrumb *ngIf="isLoggedIn" [exerciseName]="selectedExercise"></app-breadcrumb>
   </div>
   
-  <!-- Área de contenido que ocupa el espacio restante -->
+  <!-- Contenido principal -->
   <div class="content-container">
     <app-content 
          [exerciseName]="selectedExercise" 
@@ -13,7 +14,7 @@
     </app-content>
   </div>
   
-  <!-- Footer con altura fija -->
+  <!-- Footer -->
   <div class="footer-container">
     <app-footer></app-footer>
   </div>

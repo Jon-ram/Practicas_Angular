@@ -1,30 +1,30 @@
+/* sidebar.component.css */
 :host {
-    background-color: green;
-    display: block;
-    height: 100%;
-    color: white;
-    padding: 10px;
-  }
-  
-  h3 {
-    margin-top: 0;
-  }
-  
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    cursor: pointer;
-    margin: 5px 0;
-    padding: 5px;
-    background-color: #005500;
-    border-radius: 4px;
-  }
-  
-  li:hover {
-    background-color: #007700;
-  }
-  
+  background-color: green;
+  display: block;
+  height: 90vh; /* Se hereda el 95vh del contenedor */
+  color: white;
+  padding: 10px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #005500;
+  border-radius: 4px;
+}
+
+li:hover {
+  background-color: #007700;
+}
