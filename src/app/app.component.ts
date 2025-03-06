@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PageContainerComponent } from './components/page-container/page-container.component';
@@ -12,37 +12,37 @@ import { NgIf } from '@angular/common';
     NavbarComponent,
     SidebarComponent,
     PageContainerComponent,
-    NgIf,
-    RouterOutlet  // Para usar <router-outlet>
+    NgIf
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // Propiedades que se usan en la plantilla
+  title = 'ManualEjercicios_Anglar_230410';
+
+  isSidebarCollapsed = false;
   currentExercise: string = '';
   isLoggedIn: boolean = true;
-  isSidebarCollapsed: boolean = false;
 
   constructor(private router: Router) {}
 
-  toggleSidebar(): void {
+  toggleSidebar() {
     this.isSidebarCollapsed = !this.isSidebarCollapsed;
   }
 
-  onExerciseSelected(exerciseName: string): void {
+  onExerciseSelected(exerciseName: string) {
     this.currentExercise = exerciseName;
-    // Navega a Ejercicio 12 si se selecciona
-    if (exerciseName === 'Ejercicio 12') {
-      this.router.navigate(['/ejercicio-12']);
-    }
+
+    // Si deseas navegar con rutas, habilita algo como:
+    // this.router.navigate([`/ejercicio-${exerciseName.split(' ')[1]}`]);
+    // Asegúrate de tener definidas esas rutas en app.routes.ts
   }
 
-  logout(): void {
+  logout() {
     this.isLoggedIn = false;
   }
 
-  login(): void {
+  login() {
     this.isLoggedIn = true;
   }
 }

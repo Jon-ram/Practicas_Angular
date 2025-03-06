@@ -1,6 +1,27 @@
-<div>
-    <button (click)="toggleSidebar()">Menu</button>
-    <!-- Botón Logout en el navbar -->
-    <button (click)="onLogout()">Logout</button>
+<div class="navbar-container">
+  <button (click)="toggleSidebar()">Menu</button>
+  <button (click)="onLogout()">Logout</button>
+
+  <!-- Contenedor del panel de ejercicios dentro del navbar -->
+  <div class="exercises-container">
+    <div class="exercises-button" (click)="toggleExpansion()">
+      Ejercicios
+    </div>
+    <div class="expansion-panel" *ngIf="isExpanded">
+      <ul>
+        <li (click)="selectExercise('Ejercicio 01')">Ejercicio 01</li>
+        <li (click)="selectExercise('Ejercicio 02')">Ejercicio 02</li>
+        <li (click)="selectExercise('Ejercicio 03')">Ejercicio 03</li>
+        <li (click)="selectExercise('Ejercicio 04')">Ejercicio 04</li>
+        <li (click)="selectExercise('Ejercicio 05')">Ejercicio 05</li>
+        <li (click)="selectExercise('Ejercicio 06')">Ejercicio 06</li>
+        <li (click)="selectExercise('Ejercicio 07')">Ejercicio 07</li>
+        <li (click)="selectExercise('Ejercicio 08')">Ejercicio 08</li>
+        <li (click)="selectExercise('Ejercicio 09')">Ejercicio 09</li>
+        <li (click)="selectExercise('Ejercicio 10')">Ejercicio 10</li>
+        <li (click)="selectExercise('Ejercicio 11')">Ejercicio 11</li>
+        <li (click)="selectExercise('Ejercicio 12')">Ejercicio 12</li>
+      </ul>
+    </div>
   </div>
-  
+</div>

@@ -1,3 +1,4 @@
+<!-- content.component.html -->
 <!-- Si se ha hecho logout, se muestra el botón Login centrado -->
 <div *ngIf="!isLoggedIn" class="login-container">
   <button (click)="loginClick()">Login</button>
@@ -23,23 +24,28 @@
   <div *ngIf="exerciseName === 'Ejercicio 06'">
     <app-ejercicio-06></app-ejercicio-06>
   </div>
-  <div *ngIf="!exerciseName">
-    <p>Selecciona un ejercicio en la barra lateral.</p>
-  </div>
   <div *ngIf="exerciseName === 'Ejercicio 07'">
     <app-ejercicio-07></app-ejercicio-07>
   </div>
   <div *ngIf="exerciseName === 'Ejercicio 08'">
-    <app-ejercicio-08 [name]="'Jonathan'"></app-ejercicio-08>
+    <app-ejercicio-08></app-ejercicio-08>
   </div>
   <div *ngIf="exerciseName === 'Ejercicio 09'">
-    <app-ejercicio-09 (itemAdded)="onItemAdded()"></app-ejercicio-09>
-    <p>Items added: {{ itemCount }}</p>
+    <app-ejercicio-09></app-ejercicio-09>
   </div>
   <div *ngIf="exerciseName === 'Ejercicio 10'">
     <app-ejercicio-10></app-ejercicio-10>
   </div>
   <div *ngIf="exerciseName === 'Ejercicio 11'">
     <app-ejercicio-11></app-ejercicio-11>
-  </div>  
+  </div>
+  <div *ngIf="exerciseName === 'Ejercicio 12'">
+    <!-- Ejemplo si tienes el componente 12 -->
+    <app-ejercicio-12></app-ejercicio-12>
+  </div>
+
+  <!-- Si no hay ejercicio seleccionado, muestra un mensaje -->
+  <div *ngIf="!exerciseName">
+    <p>Selecciona un ejercicio en el panel "Ejercicios" (navbar).</p>
+  </div>
 </div>

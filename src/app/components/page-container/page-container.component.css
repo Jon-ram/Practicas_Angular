@@ -2,20 +2,20 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ocupa el 95vh que le asigna el contenedor padre */
+  height: 98%; /* Ocupa el 95vh que le asigna el contenedor padre */
   margin: 0;
   padding: 0;
 }
 
 .breadcrumb-container {
-  height: 5%; /* 5% del alto de page-container */
+  height: 10%; /* 5% del alto de page-container */
 }
 
 .content-container {
-  height: 90%; /* 90% del alto de page-container */
+  height: 80%; /* 90% del alto de page-container */
   overflow: auto;
 }
 
 .footer-container {
-  height: 5%; /* 5% del alto de page-container */
+  height: 10%; /* 5% del alto de page-container */
 }

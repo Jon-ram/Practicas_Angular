@@ -11,6 +11,7 @@ import { Ejercicio08Component } from '../../ejercicio-08/ejercicio-08.component'
 import { Ejercicio09Component } from '../../ejercicio-09/ejercicio-09.component';
 import { Ejercicio10Component } from '../../ejercicio-10/ejercicio-10.component';
 import { Ejercicio11Component } from '../../ejercicio-11/ejercicio-11.component';
+import { Ejercicio12Component } from '../../ejercicio-12/ejercicio-12.component';
 
 @Component({
   selector: 'app-content',
@@ -28,6 +29,7 @@ import { Ejercicio11Component } from '../../ejercicio-11/ejercicio-11.component'
     Ejercicio09Component,
     Ejercicio10Component,
     Ejercicio11Component,
+    Ejercicio12Component
   ],
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
@@ -36,12 +38,6 @@ export class ContentComponent {
   @Input() exerciseName: string = '';
   @Input() isLoggedIn: boolean = true;
   @Output() login = new EventEmitter<void>();
-  
-  itemCount = 0;
-
-  onItemAdded() {
-    this.itemCount++;
-  }
 
   loginClick() {
     this.login.emit();
